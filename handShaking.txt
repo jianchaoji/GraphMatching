@@ -1,0 +1,217 @@
+
+The name of the graph is gre_1107.mtx
+There are 1107 vertex 5664 edges in the graph
+The iteration is 4
+
+The name of the graph is mycielskian12.mtx
+There are 3071 vertex 203600 edges in the graph
+The iteration is 1
+
+The name of the graph is mycielskian10.mtx
+There are 767 vertex 22196 edges in the graph
+The iteration is 1
+
+The name of the graph is mycielskian11.mtx
+There are 1535 vertex 67355 edges in the graph
+The iteration is 1
+
+The name of the graph is mycielskian12.mtx
+There are 3071 vertex 203600 edges in the graph
+The iteration is 10
+
+The name of the graph is mycielskian10.mtx
+There are 767 vertex 22196 edges in the graph
+The iteration is 7
+
+The name of the graph is mycielskian11.mtx
+There are 1535 vertex 67355 edges in the graph
+The iteration is 9
+
+The name of the graph is mycielskian13.mtx
+There are 6143 vertex 613871 edges in the graph
+The iteration is 12
+
+The name of the graph is delaunay_n13.mtx
+There are 8192 vertex 24547 edges in the graph
+The iteration is 6
+
+The name of the graph is delaunay_n14.mtx
+There are 16384 vertex 49122 edges in the graph
+The iteration is 5
+
+The name of the graph is delaunay_n15.mtx
+There are 32768 vertex 98274 edges in the graph
+The iteration is 6
+
+The name of the graph is delaunay_n16.mtx
+There are 65536 vertex 196575 edges in the graph
+The iteration is 6
+
+The name of the graph is enron.mtx
+There are 69244 vertex 276143 edges in the graph
+The iteration is 8
+
+The name of the graph is fe_body.mtx
+There are 45087 vertex 163734 edges in the graph
+The iteration is 6
+
+The name of the graph is fe_rotor.mtx
+There are 99617 vertex 662431 edges in the graph
+The iteration is 7
+
+The name of the graph is fe_sphere.mtx
+There are 16386 vertex 49152 edges in the graph
+The iteration is 5
+
+The name of the graph is fe_tooth.mtx
+There are 78136 vertex 452591 edges in the graph
+The iteration is 6
+
+The name of the graph is cit-HepTh.mtx
+There are 27770 vertex 352807 edges in the graph
+The iteration is 9
+
+The name of the graph is cit-HepPh.mtx
+There are 34546 vertex 421578 edges in the graph
+The iteration is 8
+
+The name of the graph is cs4.mtx
+There are 22499 vertex 43858 edges in the graph
+The iteration is 5
+
+The name of the graph is cti.mtx
+There are 16840 vertex 48232 edges in the graph
+The iteration is 6
+
+The name of the graph is data.mtx
+There are 2851 vertex 15093 edges in the graph
+The iteration is 7
+
+The name of the graph is dblp-2010.mtx
+There are 326186 vertex 807700 edges in the graph
+The iteration is 8
+
+The name of the graph is amazon0505.mtx
+There are 410236 vertex 3356824 edges in the graph
+The iteration is 7
+
+The name of the graph is amazon0601.mtx
+There are 403394 vertex 3387388 edges in the graph
+The iteration is 9
+
+The name of the graph is GD95_b.mtx
+There are 73 vertex 96 edges in the graph
+The iteration is 2
+
+The name of the graph is GD97_a.mtx
+There are 84 vertex 166 edges in the graph
+The iteration is 4
+
+The name of the graph is GD98_a.mtx
+There are 38 vertex 50 edges in the graph
+The iteration is 1
+
+The name of the graph is mycielskian3.mtx
+There are 5 vertex 5 edges in the graph
+The iteration is 1
+
+The name of the graph is caidaRouterLevel.mtx
+There are 192244 vertex 609066 edges in the graph
+The iteration is 7
+
+The name of the graph is email-Enron.mtx
+There are 36692 vertex 183831 edges in the graph
+The iteration is 7
+
+The name of the graph is email-EuAll.mtx
+There are 265214 vertex 420045 edges in the graph
+The iteration is 6
+
+The name of the graph is loc-Brightkite.mtx
+There are 58228 vertex 214078 edges in the graph
+The iteration is 7
+
+The name of the graph is fe_body.mtx
+There are 45087 vertex 163734 edges in the graph
+The iteration is 6
+
+The name of the graph is mycielskian12.mtx
+There are 3071 vertex 203600 edges in the graph
+The iteration is 12
+
+The name of the graph is caidaRouterLevel.mtx
+There are 192244 vertex 609066 edges in the graph
+The iteration is 7
+
+The name of the graph is G_n_pin_pout.mtx
+There are 100000 vertex 501198 edges in the graph
+The iteration is 7
+
+The name of the graph is NotreDame_www.mtx
+There are 325729 vertex 929849 edges in the graph
+The iteration is 7
+
+The name of the graph is preferentialAttachment.mtx
+There are 100000 vertex 499985 edges in the graph
+The iteration is 6
+
+The name of the graph is caidaRouterLevel.mtx
+There are 192244 vertex 609066 edges in the graph
+The iteration is 7
+
+The name of the graph is rgg_n_2_16_s0.mtx
+There are 65536 vertex 342127 edges in the graph
+The iteration is 7
+
+The name of the graph is smallworld.mtx
+There are 100000 vertex 499998 edges in the graph
+The iteration is 6
+
+The name of the graph is g3rmt3m3.mtx
+There are 5357 vertex 106526 edges in the graph
+The iteration is 7
+
+The name of the graph is bfly.mtx
+There are 49152 vertex 98304 edges in the graph
+The iteration is 5
+
+The name of the graph is luxembourg_osm.mtx
+There are 114599 vertex 119666 edges in the graph
+The iteration is 4
+
+The name of the graph is man_5976.mtx
+There are 5976 vertex 115464 edges in the graph
+The iteration is 7
+
+The name of the graph is shock-9.mtx
+There are 36476 vertex 71290 edges in the graph
+The iteration is 5
+
+The name of the graph is struct4.mtx
+There are 4350 vertex 121074 edges in the graph
+The iteration is 7
+
+The name of the graph is sx-mathoverflow.mtx
+There are 24818 vertex 239978 edges in the graph
+The iteration is 5
+
+The name of the graph is vsp_barth5_1Ksep_50in_5Kout.mtx
+There are 32212 vertex 101805 edges in the graph
+The iteration is 6
+
+The name of the graph is vsp_befref_fxm_2_4_air02.mtx
+There are 14109 vertex 98224 edges in the graph
+The iteration is 6
+
+The name of the graph is vsp_c-30_data_data.mtx
+There are 11023 vertex 62184 edges in the graph
+The iteration is 7
+
+The name of the graph is vsp_data_and_seymourl.mtx
+There are 9167 vertex 55866 edges in the graph
+The iteration is 5
+
+The name of the graph is vsp_p0291_seymourl_iiasa.mtx
+There are 10498 vertex 53868 edges in the graph
+The iteration is 5
+

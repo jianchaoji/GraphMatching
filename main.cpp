@@ -22,7 +22,7 @@ int  main(int arc,char *arv[] ) {
 	test.pre();
         test.handShaking(inputFile);
 	//cout << "Doing verify now " << endl;
-	//test.verify();
+	
 	//test1.tree();
 	//test.treeDepth();
 	//test.counting(inputFile);

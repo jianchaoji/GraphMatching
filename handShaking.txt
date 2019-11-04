@@ -1,0 +1,28 @@
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 1
+
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 0
+
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 1
+
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 1
+
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 1
+
+The name of the graph is 1.txt
+There are 6 vertex 10 edges in the graph
+The iteration is 1
+
+The name of the graph is amazon.mtx
+There are 262111 vertex 1234877 edges in the graph
+The iteration is 1
+

@@ -33,6 +33,8 @@ int *treeDepthA;
 int *maxEdge;
 int *level;
 
+int *flag; //check if the vertex is matched
+
 template <class Type>
 Type stringToNum(const string& str)
 {
@@ -80,6 +82,7 @@ matching::matching(char *inputFile) {
 	 maxEdge = (int*)malloc(v * sizeof(int));
 	 level = (int*)malloc(v * sizeof(int));
 
+         flag = (int*)malloc(v*sizeof(int));
 	for (int i = 0; i < v; i++) {
 		degree[i] = 0;
 		offset[i] = 0;
@@ -90,6 +93,7 @@ matching::matching(char *inputFile) {
 		treeDepthA[i] = 0;
 		maxEdge[i] = 0;
 		level[i] = 0;
+		flag[i]=0;
 	}
 
 	for (int i = 0; i < e; i++) {
@@ -117,14 +121,14 @@ void matching::readFile(char *inputFile) {
 			continue;
 		}
 		else {
-			if (i % 3 == 1) {
+			if (i % 3 == 2) {
 				position = stringToNum<int>(s)-1;
 				degree[position]++;
 			}
-			else if (i % 3 == 2) {
+			else if (i % 3 == 1) {
 				index[lines] = stringToNum<int>(s)-1;
 				weight[lines] = rand() % 500;
-				//lines++;
+			//	lines++;
 				
 			}
 			else if (i % 3 == 0) {
@@ -155,29 +159,29 @@ void matching::readFile(char *inputFile) {
 		}
 	}
 	
-	/*
-	//test the result;
-	cout << "degree" << endl;
-	for (int i = 0; i < v; i++) {
-		cout << degree[i] << " ";
-	}
-	cout << endl;
-	cout << "offset" << endl;
-	for (int i = 0; i < v; i++) {
-		cout << offset[i] << " ";
-	}
-	cout << endl;
-	cout << "index" << endl;
-	for (int i = 0; i < e; i++) {
-		cout << index[i] << " ";
-	}
-	cout << endl;
-	cout << "weight" << endl;
-	for (int i = 0; i < e; i++) {
-		cout << weight[i] << " ";
-	}//end test;
-	cout << endl;
-	*/
+	
+//	//test the result;
+//	cout << "degree" << endl;
+//	for (int i = 0; i < v; i++) {
+//		cout << degree[i] << " ";
+//	}
+//	cout << endl;
+//	cout << "offset" << endl;
+//	for (int i = 0; i < v; i++) {
+//		cout << offset[i] << " ";
+//	}
+//	cout << endl;
+//	cout << "index" << endl;
+//	for (int i = 0; i < e; i++) {
+//		cout << index[i] << " ";
+//	}
+//	cout << endl;
+//	cout << "weight" << endl;
+//	for (int i = 0; i < e; i++) {
+//		cout << weight[i] << " ";
+//	}//end test;
+//	cout << endl;
+	
 }
 
 void matching::writeFile() {
@@ -267,7 +271,7 @@ void matching::reReadFile() {
 }
 //int newDegree[v];
 
-
+/*
 void matching::pre() {
 	for (int i = 0; i < v; i++) {//traverse each vertex;
 		int position = -1;
@@ -307,15 +311,13 @@ void matching::pre() {
 				}
 			}
 		}
-               /* if(position==24619||position==34087||position==45450)
-                cout<<"now doing pre- "<<i<<" the result is "<<position<<endl;  
-		if(position==24619)position=24618;*/
+                
                 //store the index and the weight;
 		newIndex[i] = position;
 		newWeight[i] = max;
 		
 	}
-	/*
+	
 	//verify the result;
 	cout << "index" << endl;
 	for (int i = 0; i < v; i++) {
@@ -328,9 +330,9 @@ void matching::pre() {
 	}
 	cout << endl;
 	//end test;
-	*/
-}
 
+      }
+*/
 void matching::verify() {
 	for (int i = 0; i < v; i++) {
 		//if(i==24619||i==34087||i==45450)continue;
@@ -392,26 +394,30 @@ void matching::maxWeight() {
 		maxEdge[i] = position;*/
 		for (int j = 0; j < degree[i]; j++) {//edge of the vertex;
 			if (max < weight[temp]) {
+			//	cout<<"start match vertex"<<i<<endl;
+				if(flag[index[temp]]!=-1){
 				position = index[temp];//update the max end point;
+			//	cout<<"The position is : "<< position<<endl;
 				max = weight[temp];//update the max edge;
+				}
 			}
 			temp++;
 		}
 
-		for (int j = 0; j < e; j++) {//find the other possible vertex;
-			if (index[j] != i)continue;
-			else {
-				if (max < weight[j]) {
-					max = weight[j];
-					for (int k = 0; k < v; k++) {//update the position
-						if (offset[k] > j) {
-							position = k - 1;//update finished
-							break;
-						}
-					}
-				}
-			}
-		}
+	//	for (int j = 0; j < e; j++) {//find the other possible vertex;
+	//		if (index[j] != i)continue;
+	//		else {
+	//			if (max < weight[j]) {
+	//				max = weight[j];
+	//				for (int k = 0; k < v; k++) {//update the position
+	//					if (offset[k] > j) {
+	//						position = k - 1;//update finished
+	//						break;
+	//					}
+	//				}
+	//			}
+	//		}
+	//	}
 
 		maxEdge[i] = position;
 	}
@@ -452,18 +458,23 @@ void matching::deleteWeight(int j, int k) {
 		index[temp] = -1;
 		weight[temp] = -1;
 	}
-
-	for (int i = 0; i < e; i++) {
-		if (index[i] == j || index[i] == k) {
-			index[i] = -1;
-			weight[i] = -1;
-		}
-	}
-   /*	for(int i=0;i<v;i++){
+	flag[j]=-1;
+//	cout<<"delete vertex :"<< j<<endl;
+	flag[k]=-1;
+//	cout<<"delete vertex :"<<k<<endl;
+//	for (int i = 0; i < e; i++) {
+//		if (index[i] == j || index[i] == k) {
+//			index[i] = -1;
+//			weight[i] = -1;
+//		}
+//	}
+/*
+   	for(int i=0;i<v;i++){
 	if(i==j||i==k){
 	offset[i]=-1;
 		}
-	}*/
+	}
+*/
 }
 
 
@@ -584,17 +595,18 @@ void matching::handShaking(char *inputFile){
      while(true){
  	maxWeight();
 	pairs[i]=matchWeight()-1;
-	cout<<pairs[i]<<endl;
-	if(pairs[i]==0)break;
+//	cout<<pairs[i]<<endl;
+	if(pairs[i]<=0)break;
 	i++;
+	
 	//if(pairs[i-1]==0)return;
 	}
 	int iteration=0;
-     while(true){
-	if(pairs[iteration]!=0)iteration++;
-	else break;
-	}
-	oHandShaking.open("handShaking.txt",ios::app);
+//     while(true){
+//	if(pairs[iteration]!=0)iteration++;
+//	else break;
+//	}
+//	oHandShaking.open("handShaking.txt",ios::app);
 	oHandShaking<<"The name of the graph is "<< inputFile<<endl
 		<<"There are "<<v<< " vertex "<< e <<" edges in the graph"<<endl
 		<<"The iteration is "<<iteration<<endl<<endl;

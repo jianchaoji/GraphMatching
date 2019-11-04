@@ -19,7 +19,7 @@ int  main(int arc,char *arv[] ) {
 	//test.writeFile();
 	//test.reReadFile();
 	//cout << "Doing pre now " << endl;
-	test.pre();
+//	test.pre();
         test.handShaking(inputFile);
 	//cout << "Doing verify now " << endl;
 	

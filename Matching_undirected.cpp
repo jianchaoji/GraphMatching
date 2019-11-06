@@ -297,6 +297,8 @@ void matching::deleteWeight(int j, int k) {
 
 void matching::handShaking(char *inputFile){
      int *pairs;
+     clock_t startTime,endTime;
+	startTime=clock();
      pairs=(int*)malloc(v*sizeof(int));
      for(int i=0 ; i<v;i++){
 	pairs[i]=0;
@@ -318,6 +320,8 @@ void matching::handShaking(char *inputFile){
 //	cout<<endl;
 	//if(pairs[i-1]==0)return;
 	}
+	endTime=clock();
+	cout<<"The running time is "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
 	int iteration=0;
 //     while(true){
 //	if(pairs[iteration]!=0)iteration++;

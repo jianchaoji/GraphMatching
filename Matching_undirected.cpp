@@ -297,6 +297,7 @@ void matching::deleteWeight(int j, int k) {
 
 void matching::handShaking(char *inputFile){
      int *pairs;
+	int sum=0;
      clock_t startTime,endTime;
 	startTime=clock();
      pairs=(int*)malloc(v*sizeof(int));
@@ -307,6 +308,7 @@ void matching::handShaking(char *inputFile){
      while(true){
  	maxWeight();
 	pairs[i]=matchWeight()-1;
+	sum+=pairs[i];
 //	cout<<pairs[i]<<endl;
 	if(pairs[i]<=0)break;
 	i++;
@@ -321,7 +323,10 @@ void matching::handShaking(char *inputFile){
 	//if(pairs[i-1]==0)return;
 	}
 	endTime=clock();
-	cout<<"The running time is "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
+	cout<<"The running time is "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s"<<endl;
+	cout<<"The matching percentage is "<<(double)sum/(double)v<<"%"<<endl;
+	cout<<"The name of the graph is "<<inputFile<<endl;
+	cout<<"The amount of vertex is "<<v<<" The amount of edge is "<<e<<endl;
 	int iteration=0;
 //     while(true){
 //	if(pairs[iteration]!=0)iteration++;
